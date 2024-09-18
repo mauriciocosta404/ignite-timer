@@ -8,10 +8,18 @@ export function Home(){
             <form action="">
                 <S.FormCountainer>
                     <label htmlFor="task">Vou trabalhar em</label>
-                    <input id="task" />
+                    
+                    <S.TaskInput 
+                        placeholder="Dê um nome para o seu projecto" 
+                        id="task" 
+                    />
                     
                     <label htmlFor="">durante</label>
-                    <input type="number" id="minutesAmount" />
+                    <S.MinutesAmountInput 
+                        placeholder="00" 
+                        type="number" 
+                        id="minutesAmount" 
+                    />
 
                     <span>minutos.</span>
                 </S.FormCountainer>
@@ -24,10 +32,10 @@ export function Home(){
                     <span>0</span>
                 </S.CountDownContainer>
 
-                <button>
-                    <Play/>
+                <S.StartCountDownButton type="submit">
+                    <Play size={24}/>
                     Começar
-                </button>
+                </S.StartCountDownButton>
             </form>
 
         </S.HomeContainer>
