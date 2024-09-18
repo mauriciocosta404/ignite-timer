@@ -11,14 +11,25 @@ export function Home(){
                     
                     <S.TaskInput 
                         placeholder="Dê um nome para o seu projecto" 
-                        id="task" 
+                        id="task"
+                        list="task-suggestions" 
                     />
+
+                    <datalist id="task-suggestions">
+                        <option value="Projecto 1"/>
+                        <option value="Projecto 2"/>
+                        <option value="Projecto 3"/>
+                        <option value="Banana"/>
+                    </datalist>
                     
                     <label htmlFor="">durante</label>
                     <S.MinutesAmountInput 
                         placeholder="00" 
                         type="number" 
                         id="minutesAmount" 
+                        step={5}
+                        min={5}
+                        max={60}
                     />
 
                     <span>minutos.</span>
